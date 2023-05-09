@@ -62,6 +62,10 @@ def msgDecrypt(msg, n, d):
 
 #Generate whole key from interval
 def keyGenerator(bottom, top):
+    if(top<bottom):
+            aux = bottom
+            bottom = top
+            top = aux
     bottom = int(bottom)
     top = int(top)
     #Generating 'p' and 'q' using primeGenerator method
