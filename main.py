@@ -24,7 +24,7 @@ def primesInRange(bottom, top):
 #Generates random prime number 'p' and 'q' in selected interval for RSA algorithm
 def primeGenerator(bottom, top):
     #Maximum is 1000 because of limitations of computing power
-
+    
     #prime_list is list of all prime numbers in range min-max
     prime_list = primesInRange(bottom, top)
     if(len(prime_list)<2):
@@ -62,10 +62,6 @@ def msgDecrypt(msg, n, d):
 
 #Generate whole key from interval
 def keyGenerator(bottom, top):
-    if(top<bottom):
-            aux = bottom
-            bottom = top
-            top = aux
     bottom = int(bottom)
     top = int(top)
     #Generating 'p' and 'q' using primeGenerator method
